@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="border">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+        <form [formGroup]="signupForm" (ngSubmit)="onsubmit()">
+          <h3>reactive form</h3>
+          <div formGroupName="userData">
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" formControlName="username" id="username" class="form-control">
+            </div>
+            <div class="span">
+              <span *ngIf="!signupForm.get('userData.username').valid && signupForm.get('userData.username').touched"
+                class="help-block">please use a valid username!</span>
+            </div>
+
+            <div class="form-group">
+              <label class="input2" for="email">email</label>
+              <input type="text" formControlName="Email" id="email" class="form-control">
+            </div>
+            <div class=span>
+              <span *ngIf="!signupForm.get('userData.Email').valid && signupForm.get('userData.Email').touched"
+                class="help-block">please
+                enter a valid email!</span>
+            </div>
+          </div>
+          <div class="radiobtnpos">
+            <div class="radio" *ngFor="let gender of genders">
+              <label>
+                <input type="radio" formControlName="gender" [value]="gender">{{ gender }}
+              </label>
+            </div>
+          </div>
+          <div formArrayName="hobbies">
+            <h4>Your hobbies</h4>
+            <button class="button" type="button" (click)="onAddhobbies()">Add hobbies</button>
+            <div class="form-group" *ngFor="let hobbyControl of signupForm.get('hobbies')['controls'];  let i = index" >
+              <input [formControlName]="i">
+            </div>
+          </div>
+          <div class="Span">
+            <span *ngIf="!signupForm.valid && signupForm.touched" class="help-block">please enter valid data!!</span>
+          </div>
+
+
+          <button class="button" type="submit">Submit</button>
+          <button class="button">suggest name</button>
+          <hr>
+          <div class="col-xs-12">
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

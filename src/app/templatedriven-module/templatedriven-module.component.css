@@ -1,0 +1,71 @@
+.container {
+  margin-top: 30px;
+  text-align: -webkit-center;
+
+}
+.border{
+  text-align:center;
+  font-family: sans-serif;
+  width: 600px;
+  height: 500px;
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+border-radius: 30px;
+  -webkit-box-shadow: -1px 5px 36px -7px rgba(0,0,0,0.65);
+-moz-box-shadow: -1px 5px 36px -7px rgba(0,0,0,0.65);
+box-shadow: -1px 5px 36px -7px rgba(0,0,0,0.65);
+
+}
+
+input.ng-invalid.ng-touched {
+border: 3px solid red;
+}
+
+input.ng-valid.ng-touched{
+  border: 3px solid green;
+}
+
+.form-group{
+  margin: 10px;
+}
+label{
+  margin-right: 20px;
+}
+.email{
+  padding-right: 26px;
+}
+.radio{
+  margin: 5px;
+  display: contents;
+}
+.input{
+  margin-left: -10px;
+  margin-right:2px;
+}
+.input1{
+  border-radius: 15px;
+}
+.input2{
+  border-radius: 15px;
+}
+.form-control{
+  padding: 12px 20px;
+  border-radius: 20px;
+}
+.radiobtnpos{
+  margin-top: 20px;
+  margin-left:120px;
+  margin-bottom:20px;
+}
+.button{
+  padding: 10px 20px;
+  margin-left: 60px;
+  border-radius: 30px;
+  color: white;
+  background: cornflowerblue;
+}
+.template{
+  margin: 30px;
+  margin-left: 80px
+}
