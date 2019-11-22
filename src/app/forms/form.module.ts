@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { Routes } from '@angular/router';
 import { FormComponent } from './form.component';
 import { FormRoutingModule } from './form-routing.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -15,7 +16,7 @@ const routes: Routes = [
   declarations: [FormComponent],
   imports: [
     CommonModule,
-    FormRoutingModule
+    FormRoutingModule, NgbModule
   ]
 })
 export class FormModule { }
